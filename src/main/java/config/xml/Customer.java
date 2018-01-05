@@ -6,7 +6,8 @@ import common.infc.DemoService;
 
 public class Customer {
 	public static void main(String[] args) {
-		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:config/xml/customer.xml");
+		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(
+				"classpath:config/xml/customer.xml");
 		DemoService demoService = (DemoService) applicationContext.getBean("demoServiceRemote");
 		String answer = demoService.say("LiMingHui");
 		System.out.println("############# " + answer);
