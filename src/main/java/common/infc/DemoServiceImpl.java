@@ -1,6 +1,4 @@
-package config.api;
-
-import common.infc.DemoService;
+package common.infc;
 
 public class DemoServiceImpl implements DemoService {
 

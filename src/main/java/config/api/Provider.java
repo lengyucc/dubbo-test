@@ -8,6 +8,7 @@ import com.alibaba.dubbo.config.RegistryConfig;
 import com.alibaba.dubbo.config.ServiceConfig;
 
 import common.infc.DemoService;
+import common.infc.DemoServiceImpl;
 
 public class Provider {
 	public static void main(String[] args) throws IOException {
