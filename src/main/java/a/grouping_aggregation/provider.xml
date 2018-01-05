@@ -5,6 +5,8 @@
 	<dubbo:application name="demo-provider" />
 	<dubbo:registry address="zookeeper://127.0.0.1:2181" />
 	<dubbo:protocol name="dubbo" port="12345" />
-	<dubbo:service interface="common.infc.DemoService" ref="demoService" />
-	<bean id="demoService" class="common.infc.DemoServiceImpl" />
+	<dubbo:service interface="common.infc.DemoService" ref="demoAService" group="groupA" />
+	<dubbo:service interface="common.infc.DemoService" ref="demoBService" group="groupB" />
+	<bean id="demoAService" class="a.grouping_aggregation.DemoAServiceImpl" />
+	<bean id="demoBService" class="a.grouping_aggregation.DemoBServiceImpl" />
 </beans>
