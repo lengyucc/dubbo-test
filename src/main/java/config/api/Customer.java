@@ -20,12 +20,12 @@ public class Customer {
 		referenceConfig.setRegistry(registryConfig);
 		referenceConfig.setInterface(DemoService.class);
 		referenceConfig.setVersion("1.0.0");
-		
+
 		// 使用远程服务
 		DemoService demoService = referenceConfig.get();
-		
+
 		int idx = 0;
-		while(true){
+		while (true) {
 			String answer = demoService.say("LiMingHui" + idx++);
 			System.out.println(">>>>>>> " + answer);
 			try {
