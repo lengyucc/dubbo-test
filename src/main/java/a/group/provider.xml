@@ -7,6 +7,6 @@
 	<dubbo:protocol name="dubbo" port="12345" />
 	<dubbo:service interface="common.infc.DemoService" ref="demoAService" group="groupA" />
 	<dubbo:service interface="common.infc.DemoService" ref="demoBService" group="groupB" />
-	<bean id="demoAService" class="a.grouping_aggregation.DemoAServiceImpl" />
-	<bean id="demoBService" class="a.grouping_aggregation.DemoBServiceImpl" />
+	<bean id="demoAService" class="a.group.DemoAServiceImpl" />
+	<bean id="demoBService" class="a.group.DemoBServiceImpl" />
 </beans>

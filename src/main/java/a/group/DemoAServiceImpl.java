@@ -1,4 +1,4 @@
-package a.grouping_aggregation;
+package a.group;
 
 import common.infc.DemoService;
 
