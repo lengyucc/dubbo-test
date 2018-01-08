@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	<dubbo:application name="demo-provider" />
+	<dubbo:registry address="zookeeper://127.0.0.1:2181" />
+	<dubbo:protocol name="dubbo" port="12345" />
+	<dubbo:service ref="mergeService1" group="new" interface="b.group_aggregation.IDubboMergeService"/>
+	<dubbo:service ref="mergeService2" group="old" interface="b.group_aggregation.IDubboMergeService"/>
+	<bean id="mergeService1" class="b.group_aggregation.DubboMergeService1Impl" />
+	<bean id="mergeService2" class="b.group_aggregation.DubboMergeService2Impl" />
+</beans>
