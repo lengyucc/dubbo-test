@@ -15,6 +15,7 @@ public class Customer {
 		for (int i = 0; i < 100; i++) {
 			long time = System.currentTimeMillis();
 			System.out.println(time);
+			// 在服务消费方端设置隐式参数
 			RpcContext.getContext().setAttachment("time", String.valueOf(time));
 			System.out.println(demoService.say("LiMingHui" + time));
 			System.out.println();
