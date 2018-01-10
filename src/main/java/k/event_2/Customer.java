@@ -23,7 +23,7 @@ public class Customer {
 				break;
 			}
 		}
-		System.out.println(notify.ret.get(requestId).getId());
+		System.out.println(notify.ret);
 
 		applicationContext.close();
 	}
